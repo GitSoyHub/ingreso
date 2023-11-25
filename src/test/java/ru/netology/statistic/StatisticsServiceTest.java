@@ -15,4 +15,16 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void findMaxFromMiddle() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {12, 5, 90, 4, 5, 3, 8, 6, 11, 11, 12};
+        long expected = 90;
+
+        long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
